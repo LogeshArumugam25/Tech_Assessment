@@ -1,0 +1,53 @@
+.cardOuter {
+    background-color: #f1f1f1;
+    margin: 6rem 10rem 0 16rem; 
+    width: 40rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* .card-header {
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-footer {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+  
+.nameLabel{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Nunito";
+}
+
+.acc_label{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Nunito";
+    color: #6c6c6c;
+}
+
+.reps_label{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Nunito";
+}
+
+.uderlineTxt{
+    text-decoration: none;
+}
