@@ -1,40 +1,41 @@
-.scrollBox{
-    max-width: 400px;
-    max-height: 83vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border: 2px solid #848484;
-    border-radius: 12px;
-    padding: 5px;
-    overflow: -moz-scrollbars-none;
+.scrollBox {
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 2px solid #848484;
+  border-radius: 10px;
+  padding: 4px;
+  overflow: -moz-scrollbars-none;
 }
 
-.scrollBox::-webkit-scrollbar{
-    display: none;
+.scrollBox::-webkit-scrollbar {
+  display: none;
 }
 
-.UserList{
-    border-radius: 7px;
-    margin: 10px !important;
-    padding: 0;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
-    background-color: #cfcfcf,
+.UserList {
+  border-radius: 6px;
+  margin: 12px !important;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #cfcfcf;
+  border: 1px solid #ccc !important;
 }
 
-.outerPage{
-    padding: 0 23rem 0 23rem;
+.outerPage {
+  margin: 0.5rem auto;
 }
 
-.usersLabel{
-    font-size: 25px;
-    font-weight: 600;
-    font-family: "Nunito";
+.usersLabel {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Nunito";
 }
 
-.info-Click{
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Nunito";
+.info-Click {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Nunito";
 }

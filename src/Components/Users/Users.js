@@ -8,6 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useNavigate } from "react-router-dom";
 
 const Users = () => {
@@ -18,30 +19,30 @@ const Users = () => {
   const GetAllUsers = async () => {
     try {
       const response = await getUsersData();
-      if(response){
-      if (response.length > 0) {
-        console.log(response);
-        setUsers(response);
-        setLoader(false);
+      if (response) {
+        if (response.length > 0) {
+          console.log(response);
+          setUsers(response);
+          setLoader(false);
+        }
+      } else {
+        alert("Something went wrong!");
       }
-    }else {
-      alert("Something went wrong!")
-    }
     } catch (error) {
       console.log("Error:", error);
     }
   };
 
   const NavToProfile = (UserName) => {
-    navigate(`/users/:${UserName}`)
-  }
+    navigate(`/users/:${UserName}`);
+  };
 
   useEffect(() => {
     GetAllUsers();
   }, []);
 
   return (
-    <div className="d-flex flex-column gap-3 justify-content-center outerPage">
+    <div className="d-flex flex-column gap-3 justify-content-center align-items-center outerPage">
       <div className="d-flex flex-column gap-2 align-items-center">
         <div className="usersLabel">Git Hub Users List</div>
         <span className="info-Click">Click to see profile of the users...</span>
@@ -58,12 +59,12 @@ const Users = () => {
                 sx={{
                   width: "100%",
                   maxWidth: 360,
-                  bgcolor: "#cfcfcf",
+                  bgcolor: "#f1f1f1",
                 }}
                 className="UserList"
                 onClick={() => NavToProfile(user.login)}
               >
-                <ListItem alignItems="flex-start">
+                <ListItem alignItems="flex-start center">
                   <ListItemAvatar>
                     <Avatar
                       alt="Remy Sharp"
@@ -72,7 +73,7 @@ const Users = () => {
                     />
                   </ListItemAvatar>
                   <ListItemText
-                    className="px-2"
+                    className="px-3"
                     primary={
                       <Typography
                         fontFamily={"Nunito"}
@@ -93,10 +94,14 @@ const Users = () => {
                           fontSize={"14px"}
                           fontWeight={"600"}
                         >
-                          UserID: {user.node_id}
+                          ID: {user.node_id}
                         </Typography>
                       </React.Fragment>
                     }
+                  />
+                  <OpenInNewIcon
+                    sx={{ fontSize: 20, color: "#0a58ca" }}
+                    onClick={() => NavToProfile(user.login)}
                   />
                 </ListItem>
               </List>
